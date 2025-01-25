@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #F8F9FF;
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+} 
+
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    width: auto;
+    height: 32px;
+    max-width: 179px;
+    object-fit: contain;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 50px; /* Расстояние между кнопками */
+    padding: 0; /* Убираем лишние внутренние отступы */
+}
+
+.navigation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 50px; /* Внутренние отступы кнопок */
+    border-radius: 25px; /* Закругление кнопок */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #009379; /* Изначальный цвет текста */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.navigation-button:hover {
+    color: #E5F4F2; /* Цвет текста при наведении */
+    background-color: #009379; /* Фон при наведении */
+    border-color: #E5F4F2; /* Граница плавно меняет цвет */
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.titletitle{
+    font-size: 67px;
+    font-weight: bold;
+    line-height: 130%;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.utitletitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 50px;
+    margin-left: 5px;
+}
+
+a{
+    color: rgb(94, 90, 219);
+    text-decoration: none;
+}
+
+.buttonstittle{
+    display: flex;
+    padding: 0;
+}
+
+.buttonOnTitle1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009379;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.buttonOnTitle1:hover{
+    transform: scale(0.9);
+}
+
+.buttonOnTitle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #009379;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px; 
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid #009379;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.buttonOnTitle2:hover{
+    transform: scale(0.9);
+}
+
+.imgtitle{
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.logos {
+    display: flex;
+    padding: 55px 60px;
+    gap: auto;
+    justify-content: space-between;
+}
+
+.logos img {
+    object-fit: contain;
+}
+
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 55px;
+}
+
+.features-sentences {
+    text-align: center;
+    max-width: 800px;
+    font-size: 16px;
+}
+
+.features-header {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.features-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.feature-block {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 384px;
+    border-radius: 10%;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+}
+
+.feature-block a {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+    color: #009379;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-block a:hover {
+    color: #E5F4F2; /* Цвет текста при наведении */
+    background-color: #009379; /* Фон при наведении */
+    border-color: #E5F4F2; /* Граница плавно меняет цвет */
+}
+
+.feature-head {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Metrics{
+    margin-top: 150px;
+}
+
+.metricsText{
+    display: flex;
+    flex-direction: column;
+}
+
+.MetricsTitle{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.MetricsUnderTitle{
+    text-align: center;
+}
+
+.metrics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.metric{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 384px;
+    border-radius: 10%;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+}
+
+.textmetric{
+    font-size: 38px;
+    font-weight: bold;
+    
+}
+
+.textmetric2{
+    
+}
+
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    padding: 120px 70px;
+    align-items: center;
+    gap: 60px;
+}
+
+.landing-page-data {
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.landing-page-data a {
+    display: inline-block;
+    padding: 16px 50px;
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #E5F4F2;
+    background-color: #009379;
+    transition: transform 0.3s ease-in-out;
+}
+
+.landing-page-data a:hover{
+    transform: scale(0.9);
+}
+
+.landing-page-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.endbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #2D2D2D;
+    color: white;
+    font-family: Mulish Regular;
+    font-size: 14px;
+}
+
+.socials-icons {
+    display: flex;
+    flex-direction: row;;
+}
+
