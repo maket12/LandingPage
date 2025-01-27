@@ -248,7 +248,7 @@
             </div>
         </div>
     </div>
-    <hr>
+ 
     <div class="meet-team">
         <div class="team-head">
             <p class="meet-teem-header">Meet our team</p>
@@ -293,9 +293,8 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div class="UIKit">
-        <div class="UIKitbox">
+    <div class="boxUIKit">
+        <div class="UIKit">
             <div class="textUIKit">
                 <p class="UIKitTitle">Get Landing Page<br>UI Kit Today!</p>
                 <p class="UIKitUnderTitle">Break the Figma limits and explore the endless<br>possibilities with Anima.</p>
@@ -308,60 +307,82 @@
             </div>
         </div>
     </div>
-    <div class="ui-kit">
-        <div class="ui-kit-text">
-            <p class="ui-kit-title">Get Landing Page<br>UI Kit Today!</p>
-            <p class="ui-kit-under-title">Break the Figma limits and explore the endless<br>possibilities with Anima.</p>
+    <div class="boxFormBlock">
+        <div class="FormBlock" id="contact">
+            <div class="textHader">
+                <p class="FormHeader">Let’s get in touch!</p>
+                <p class="uFormHeader">Got questions about the Landing Page UI Kit? Our team is here to help. Contact us for quick and friendly support.</p>
+            </div>
+            <div class="FormContacts">
+                <div class="boxFormContacts">
+                    <div class="Phone">
+                        <img class="Phoneimg" rc="media/PhoneCall.png">
+                        <p>+012 345 6789</p>
+                    </div>
+                    <div class="Mail">
+                        <img class="Phonemail" src="media/EnvelopeSimple.png">
+                        <p>Hello@animaapp.com</p>
+                    </div>
+                    <p class="FormSocialsHeader">Connect with us</p>
+                    <div class="FormSocials">
+                        <img src="media/Social Icons (2).png">
+                        <img src="media/Social Icons (1).png">
+                        <img src="media/Social Icons(4).png">
+                        <img src="media/Social Icons.png">
+                    </div>
+                </div>
+                <div class="FormFields">
+                    <div class="input-container">
+                        <input type="text" placeholder="Full Name" class="input-field" id="input">
+                    </div>
+                    <div class="input-container">
+                        <input type="email" placeholder="Email" class="input-field">
+                    </div>
+                    <button class="SendForm">Submit</button>
+                </div>
+            </div>
         </div>
-        <p><a href="https://www.animaapp.com" target="_blank">Get started &rarr;</a></p>
-        <div class="ui-kit-image">
-            <img class="imgUIKit1" src="media/Ellipse 4.png">
-            <img class="imgUIKit2" src="media/Ellipse 5.png">
-            <img class="imgUIKit3" src="media/Mobile Mockup.png">
-        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const animatedElements = document.querySelectorAll('.imgtitle');
+                setTimeout(() => {
+                    animatedElements.forEach(element => {
+                        element.classList.add('visible');
+                    });
+                }, 100);
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+                const animatedElements = document.querySelectorAll('.titlebox');
+                setTimeout(() => {
+                    animatedElements.forEach(element => {
+                        element.classList.add('visible');
+                    });
+                }, 100);
+            });
+            document.addEventListener('DOMContentLoaded', function() {
+                const logosImages = document.querySelectorAll('.logos img');
+                setTimeout(() => {
+                    logosImages.forEach((img, index) => {
+                    setTimeout(() => {
+                            img.classList.add('visible');
+                    }, 100 * index);  /* добавляем задержку*/
+                });
+                }, 100);
+            });
+        </script>
     </div>
-    <hr>
-    <div class="FormBlock" id="contact">
-        <p class="FormHeader">Let’s get in touch!</p>
-        <p>Got questions about the Landing Page UI Kit? Our team is here to help. Contact us for quick and friendly support.</p>
-        <div class="FormContacts">
-            <div class="Phone">
-                <img src="media/PhoneCall.png">
-                <p>+012 345 6789</p>
+    <footer>
+        <div class="endbar-container">
+            <div class="endbar-content">
+                <p>&copy; 2025 Anima’s Landing Page Ui Kit. </p>
+                <ul class="social-links">
+                    <li><img src="media/Social Icons(Black).png"></li>
+                    <li><img src="media/Social Icons(Black) (1).png"></li>
+                    <li><img src="media/Social Icons(Black) (2).png"></li>
+                    <li><img src="media/Social Icons(Black) (3).png"></li>
+                </ul>
             </div>
-            <div class="Mail">
-                <img src="media/EnvelopeSimple.png">
-                <p>Hello@animaapp.com</p>
-            </div>
-            <div class="FormSocials">
-                <p class="FormSocialsHeader">Connect with us</p>
-                <img src="media/Social Icons (2).png">
-                <img src="media/Social Icons (1).png">
-                <img src="media/Social Icons(4).png">
-                <img src="media/Social Icons.png">
-            </div>
-            <div class="FormFields">
-                <div class="input-container">
-                    <img src="media/Icon(person).png" alt="User Icon" class="input-icon">
-                    <input type="text" placeholder="Full Name" class="input-field">
-                  </div>
-                  <div class="input-container">
-                    <img src="media/EnvelopeSimple.png" alt="Email Icon" class="input-icon">
-                    <input type="email" placeholder="Email" class="input-field">
-                  </div>
-            </div>
-            <button class="SendForm">Submit</button>
         </div>
-    </div>
-    <hr>
-    <div class="endbar">
-        <p>© 2025 Anima’s Landing Page Ui Kit. </p>
-        <div class="socials-icons">
-            <img src="media/Social Icons(Black).png">
-            <img src="media/Social Icons(Black) (1).png">
-            <img src="media/Social Icons(Black) (2).png">
-            <img src="media/Social Icons(Black) (3).png">
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
