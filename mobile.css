@@ -1,0 +1,856 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    flex-direction: column; /* располагаем элементы вертикально*/
+    min-height: 100vh;
+    background-color: #F8F9FF;
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+    margin: 0;
+    padding: 0;
+} 
+
+footer {
+    background-color: #333; /* Замените на желаемый цвет */
+    color: white; /* Цвет текста (если нужно) */
+    padding: 20px; /* Добавьте внутренние отступы для содержимого */
+    margin: 0;  /* Убираем внешние отступы */
+    width: 100%; /* Футер занимает всю ширину */
+    box-sizing: border-box; /* Учтите padding в общей ширине */
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    width: auto;
+    height: 32px;
+    max-width: 179px;
+    object-fit: contain;
+}
+
+.navigation-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 50px; /* Внутренние отступы кнопок */
+    border-radius: 25px; /* Закругление кнопок */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #009379; /* Изначальный цвет текста */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.navigation-button:hover {
+    color: #E5F4F2; /* Цвет текста при наведении */
+    background-color: #009379; /* Фон при наведении */
+    border-color: #E5F4F2; /* Граница плавно меняет цвет */
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.titlebox{
+    opacity: 0; /*  делаем невидимым*/
+    transform: translateY(20px); /* перемещаем вниз */
+    transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
+}
+
+.titlebox.visible { /* класс для активации анимации*/
+    opacity: 1; /*  делаем видимым */
+    transform: translateY(0); /* возвращаем на место */
+}
+
+.titletitle{
+    font-size: 67px;
+    font-weight: bold;
+    line-height: 130%;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.utitletitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 50px;
+    margin-left: 5px;
+}
+
+a{
+    color: rgb(94, 90, 219);
+    text-decoration: none;
+}
+
+.buttonstittle{
+    display: flex;
+    padding: 0;
+}
+
+.buttonOnTitle1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009379;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.buttonOnTitle1:hover{
+    transform: scale(0.9);
+}
+
+.buttonOnTitle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #009379;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px; 
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid #009379;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.buttonOnTitle2:hover{
+    transform: scale(0.9);
+}
+
+.imgtitle{
+    opacity: 0; /*  делаем невидимым*/
+    transform: translateY(20px); /* перемещаем вниз */
+    transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.imgtitle.visible { /* класс для активации анимации*/
+    opacity: 1; /*  делаем видимым */
+    transform: translateY(0); /* возвращаем на место */
+}
+
+.logos {
+    display: flex;
+    padding: 55px 60px;
+    gap: auto;
+    justify-content: space-between;
+}
+
+.logos img {
+    object-fit: contain;
+    opacity: 0; /* Делаем изображения невидимыми */
+    transform: translateX(-50px); /* Перемещаем изображения влево */
+    transition: opacity 2s ease, transform 2s ease; /* Задаем плавный переход */
+}
+
+
+.logos img.visible {
+    opacity: 1; /* Делаем изображения видимыми */
+    transform: translateX(0); /* Возвращаем изображения на место */
+}
+
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 55px;
+}
+
+.features-sentences {
+    text-align: center;
+    max-width: 800px;
+    font-size: 16px;
+}
+
+.features-header {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.features-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.feature-block {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 384px;
+    border-radius: 10%;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+}
+
+.feature-block a {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+    color: #009379;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-block a:hover {
+    color: #E5F4F2; /* Цвет текста при наведении */
+    background-color: #009379; /* Фон при наведении */
+    border-color: #E5F4F2; /* Граница плавно меняет цвет */
+}
+
+.feature-head {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Metrics{
+    margin-top: 200px;
+}
+
+.metrics{
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.metric{    
+    display: flex;
+    flex-direction: column;  
+    width: 310px;
+    height: 171px;
+    border-radius: 10% 10% 0 0;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+    position: relative;
+}
+
+.metric::after{
+    content: ""; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 5px;
+    background-color: #ecb593;  
+}
+
+.metricsText{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.MetricsTitle{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 0px; 
+}
+
+.MetricsUnderTitle{
+    margin-top: 0px; 
+}
+
+.textmetric{
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.textmetric2{
+    margin-top: 3px;
+    margin-bottom:30px; 
+}
+
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    padding: 120px 70px;
+    align-items: center;
+    gap: 60px;
+}
+
+.landing-page-data {
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.landing-page-data a {
+    display: inline-block;
+    padding: 16px 50px;
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #E5F4F2;
+    background-color: #009379;
+    transition: transform 0.3s ease-in-out;
+}
+
+.landing-page-data a:hover{
+    transform: scale(0.9);
+}
+
+.landing-page-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.socials-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.real-stories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 55px;
+    text-align: center;
+}
+
+.real-stories-head {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+.real-stories-title { 
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stories-blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 370px;
+    height: 434.08px;
+    border-radius: 20px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: white;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+}
+
+
+.text-info {
+    font-size: 14px;
+}
+
+.people-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.people-name {
+    margin: 10px 0 5px 0;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.people-about {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.RealStories{
+    margin-bottom: 300px;
+    margin-top: 200px;
+}
+
+.realstories{
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+
+.realstorie{
+    width: 370px;
+    height: 430px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    background-color: white;;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.photorealstorie{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    image-rendering: auto;
+}
+
+.RealStoriestext{
+    text-align: center; 
+}
+
+.RealStoriesTitle{
+    font-size: 38px;
+    font-weight: bold; 
+    margin-bottom: 0px;
+}
+
+.realstorie2{
+    width: 370px;
+    height: 430px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    background-color: #009379;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottomplan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5F4F2;
+    color: #009379;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 100px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    margin-bottom: 30px;
+}
+
+.bottomplan:hover{
+    transform: scale(0.9);
+}
+
+.bottomplan2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #009379;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 100px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    margin-bottom: 30px;
+}
+
+.bottomplan2:hover{
+    transform: scale(0.9);
+}
+
+.textperfectplan{
+    font-size: 20px;
+}
+
+.Prise{
+    font-size: 45px;
+    font-weight: bold; 
+}
+
+.spisok{
+    font-weight: 500;
+}
+
+.textperfectplan2{
+    font-size: 20px;
+    color: white;
+}
+
+.Prise2{
+    font-size: 45px;
+    font-weight: bold; 
+    color: white;
+}
+
+.spisok2{
+    font-weight: 500;
+    color: white;
+}
+
+.PerfectPlanTitle{
+    text-align: center; 
+    font-size: 38px;
+    font-weight: bold; 
+    margin-bottom: 0px;
+}
+
+.PerfectPlanUnderTitle{
+    text-align: center; 
+}
+
+.boxUIKit{
+    display: flex;
+    justify-content: center;
+}
+
+.UIKit{ 
+    position: relative;
+    width: 1150px;
+    height: 470px;
+    border-radius: 35px;
+    background-color: #eabc9f;
+}
+
+.textUIKit{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+
+.UIKitTitle{
+    letter-spacing: -1px;
+    line-height: 1.25;
+    font-size: 50px;
+    font-weight: 700; 
+}
+
+.UIKitUnderTitle{
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 350; 
+    position: relative;
+    bottom: 40px;
+}
+
+.imgUIKit1{
+    position: absolute;
+    bottom: 0;  
+    right: 300px;
+}
+
+.imgUIKit2{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.imgUIKit3{
+    position: absolute;  /*  делаем imgUIKit3 абсолютно позиционированным  */
+    bottom: 0;          /* прижимаем к нижнему краю */
+    right: 0;            /*  прижимаем к левому краю */
+}
+
+
+
+.meet-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 120px 55px;
+}
+
+.meet-teem-header {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.team-head {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.team-participant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    height: 459px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 30px 40px rgba(10, 45, 200, 0.1); /* Лёгкая тень */
+}
+
+.team-name {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.team-about {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.socials-icons {
+    margin-top: 20px;
+    gap: 16px;
+}
+
+.boxFormBlock{
+    display: flex;
+    justify-content: center;
+}
+
+.FormBlock{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 1150px;
+    height: 470px;
+    border-radius: 35px;
+    background-color: white;
+}
+
+.textHader{
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.FormHeader{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.uFormHeader{
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400; 
+    position: relative;
+    bottom: 35px;
+}
+
+.FormContacts{
+    display: flex;
+}
+
+.boxFormContacts{
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.FormFields{
+    position: absolute;
+    top: 230px;
+    right: 50px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Phone{
+    display: flex;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400; 
+}
+
+.Mail{
+    display: flex;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.Phoneimg{
+    position: relative;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.Phonemail{
+    position: relative;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.FormSocialsHeader{
+    letter-spacing: -1px;
+    font-size: 23px;
+    font-weight: 600; 
+}
+
+.FormSocials{
+    position: relative;
+    left: -10px;
+    top: -5px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-field {
+    height: 60px;
+    padding-left: 40px;
+    border: 2px solid #c9d5c9;
+    border-radius: 20px;
+    background-color: #ffffff;
+    outline: none;
+    width: 400px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: outline 0.2s ease-in-out, border 0.2s ease-in-out, background-color 0.5s ease-in-out; /* увеличенное время,  ease-in-out */
+}
+
+.input-field:focus {
+    outline: 2px solid #b7b7b7;
+    border: 2px solid #b7b7b7; /* изменяем цвет рамки при фокусе */
+    background-color: #fcf9f9; /* изменяем цвет фона при фокусе*/
+}
+
+.input-field::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#input{
+    position: relative;
+    bottom: 10px;
+}
+.SendForm{
+    top: 130px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009379;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px;
+    border-radius: 22px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+    margin-bottom: 150px;
+}
+
+.SendForm:hover{
+    transform: scale(0.9);
+}
+
+.endbar-container {
+    width: 100%;              /*  растягиваем на всю ширину */
+    max-width: 1200px;      /*  ограничиваем максимальную ширину  */
+    margin: 0 auto;           /*  центрируем по горизонтали  */
+    padding: 0 20px;       /*  внутренний отступ  */
+    box-sizing: border-box; /*  включаем padding в размер */
+}
+
+.endbar-content {
+    display: flex;         /* делаем flex-контейнером */
+     justify-content: space-between;  /*  размещаем элементы по краям */
+      align-items: center;    /*  выравниваем элементы по центру вертикально */
+}
+
+.endbar-content p {
+    font-size: 0.9em;     /*  размер текста */
+    color: #ffffff;       /* цвет текста */
+}
+
+.social-links {
+  display: flex;  /*  делаем flex-контейнером*/
+  list-style: none;  /*  убираем маркеры списка */
+}
+
+.social-links li {
+    margin-left: 15px;  /*  отступ между элементами списка */
+}

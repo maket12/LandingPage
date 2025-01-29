@@ -2,10 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
+    flex-direction: column; /* располагаем элементы вертикально*/
+    min-height: 100vh;
     background-color: #F8F9FF;
     font-family: 'Poppins', sans-serif;
     color: #2D2D2D;
+    margin: 0;
+    padding: 0;
 } 
+
+footer {
+    background-color: #333; /* Замените на желаемый цвет */
+    color: white; /* Цвет текста (если нужно) */
+    padding: 20px; /* Добавьте внутренние отступы для содержимого */
+    margin: 0;  /* Убираем внешние отступы */
+    width: 100%; /* Футер занимает всю ширину */
+    box-sizing: border-box; /* Учтите padding в общей ширине */
+}
 
 .navigation-menu {
     display: flex;
@@ -820,16 +833,6 @@ a{
     transform: scale(0.9);
 }
 
-footer {
-    background-color: #2D2D2D; /*  цвет фона */
-    position: fixed;  /*  делаем фиксированным */
-    bottom: 0;       /*  приклеиваем к низу */
-    left: 0;            /* приклеиваем к левому краю*/
-    width: 100%;      /*  растягиваем на всю ширину */
-    padding: 10px 0;
-    z-index: 1000;
-}
-
 .endbar-container {
     width: 100%;              /*  растягиваем на всю ширину */
     max-width: 1200px;      /*  ограничиваем максимальную ширину  */
@@ -840,8 +843,8 @@ footer {
 
 .endbar-content {
     display: flex;         /* делаем flex-контейнером */
-     justify-content: space-between;  /*  размещаем элементы по краям */
-      align-items: center;    /*  выравниваем элементы по центру вертикально */
+    justify-content: space-between;  /*  размещаем элементы по краям */
+    align-items: center;    /*  выравниваем элементы по центру вертикально */
 }
 
 .endbar-content p {
