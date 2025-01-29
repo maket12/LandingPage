@@ -20,18 +20,8 @@ footer {
     box-sizing: border-box; /* Учтите padding в общей ширине */
 }
 
-.navigation-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-}
-
 .logo {
-    width: auto;
-    height: 32px;
-    max-width: 179px;
-    object-fit: contain;
+    margin: 0 auto;
 }
 
 .navigation-button {
@@ -56,12 +46,13 @@ footer {
 
 .title{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 150px;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .titlebox{
+    /* margin-left: 50%; */
     opacity: 0; /*  делаем невидимым*/
     transform: translateY(20px); /* перемещаем вниз */
     transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
@@ -77,35 +68,26 @@ footer {
     font-weight: bold;
     line-height: 130%;
     letter-spacing: -2px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .utitletitle{
     font-size: 16px;
     font-weight: 400;
     line-height: 130%;
-    margin-bottom: 50px;
-    margin-left: 5px;
-}
-
-a{
-    color: rgb(94, 90, 219);
-    text-decoration: none;
-}
-
-.buttonstittle{
-    display: flex;
-    padding: 0;
+    /* margin-bottom: 50px; */
+    /* margin-left: 5px; */
 }
 
 .buttonOnTitle1{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
     background-color: #009379;
     color: white;
     font-family: 'Poppins', sans-serif;
-    padding: 16px 50px;
+    /* padding: 16px 50px; */
     border-radius: 20px;
     font-size: 16px;
     font-weight: 600;
@@ -120,7 +102,7 @@ a{
 }
 
 .buttonOnTitle2{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -146,8 +128,10 @@ a{
     transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
     width: 450px;
     height: 450px;
-    margin-left: 100px;
-    margin-top: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* margin-left: 50%; */
+    /* margin-top: 100px; */
 }
 
 .imgtitle.visible { /* класс для активации анимации*/
@@ -157,12 +141,19 @@ a{
 
 .logos {
     display: flex;
-    padding: 55px 60px;
-    gap: auto;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Выравниваем по центру */
+    gap: 20px; /* Добавляем отступы между изображениями */
+    padding: 30px;
+    max-width: 80%; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем блок */
 }
 
 .logos img {
+    flex: 0 1 calc(50% - 20px); /* 2 колонки */
+    max-width: 100px; /* Ограничиваем максимальную ширину */
+    height: auto; /* Сохраняем пропорции */
     object-fit: contain;
     opacity: 0; /* Делаем изображения невидимыми */
     transform: translateX(-50px); /* Перемещаем изображения влево */
