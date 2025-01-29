@@ -54,6 +54,17 @@ body{
     margin-bottom: 150px;
 }
 
+.titlebox{
+    opacity: 0; /*  делаем невидимым*/
+    transform: translateY(20px); /* перемещаем вниз */
+    transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
+}
+
+.titlebox.visible { /* класс для активации анимации*/
+    opacity: 1; /*  делаем видимым */
+    transform: translateY(0); /* возвращаем на место */
+}
+
 .titletitle{
     font-size: 67px;
     font-weight: bold;
@@ -123,10 +134,18 @@ a{
 }
 
 .imgtitle{
+    opacity: 0; /*  делаем невидимым*/
+    transform: translateY(20px); /* перемещаем вниз */
+    transition: opacity 2.5s ease, transform 2.5s ease;  /* анимация opacity и transform */
     width: 450px;
     height: 450px;
     margin-left: 100px;
     margin-top: 100px;
+}
+
+.imgtitle.visible { /* класс для активации анимации*/
+    opacity: 1; /*  делаем видимым */
+    transform: translateY(0); /* возвращаем на место */
 }
 
 .logos {
@@ -138,6 +157,15 @@ a{
 
 .logos img {
     object-fit: contain;
+    opacity: 0; /* Делаем изображения невидимыми */
+    transform: translateX(-50px); /* Перемещаем изображения влево */
+    transition: opacity 2s ease, transform 2s ease; /* Задаем плавный переход */
+}
+
+
+.logos img.visible {
+    opacity: 1; /* Делаем изображения видимыми */
+    transform: translateX(0); /* Возвращаем изображения на место */
 }
 
 
@@ -301,17 +329,6 @@ a{
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-
-
-.endbar {
-    display: flex;
-    flex-direction: row;
-    background-color: #2D2D2D;
-    color: white;
-    font-family: Mulish Regular;
-    font-size: 14px;
 }
 
 .socials-icons {
@@ -537,61 +554,58 @@ a{
     text-align: center; 
 }
 
-.UIKit{ 
-    
-}
-
-.UIKitbox{
-    position: relative;
+.boxUIKit{
     display: flex;
-    
-}
-
-.textUIKit{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-.imgUIKit{
+.UIKit{ 
     position: relative;
+    width: 1150px;
+    height: 470px;
+    border-radius: 35px;
+    background-color: #eabc9f;
+}
+
+.textUIKit{
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+
+.UIKitTitle{
+    letter-spacing: -1px;
+    line-height: 1.25;
+    font-size: 50px;
+    font-weight: 700; 
+}
+
+.UIKitUnderTitle{
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 350; 
+    position: relative;
+    bottom: 40px;
 }
 
 .imgUIKit1{
     position: absolute;
- 
-
+    bottom: 0;  
+    right: 300px;
 }
 
 .imgUIKit2{
     position: absolute;
-
+    right: 0;
+    top: 0;
 }
 
 .imgUIKit3{
-    position: absolute;
-    margin-top: 28px;
+    position: absolute;  /*  делаем imgUIKit3 абсолютно позиционированным  */
+    bottom: 0;          /* прижимаем к нижнему краю */
+    right: 0;            /*  прижимаем к левому краю */
 }
 
-.UIKitTitle{
-    font-size: 45px;
-    font-weight: 1000; 
-    margin-bottom: 0px;
-}
-
-.UIKitUnderTitle{
-    margin-bottom: 50px;
-}
-
-.UIKitbox::before {
-    content: "";
-    position: absolute; 
-    width: 1350px; 
-    height: 434px; 
-    background-color: #ecb593;
-    border-radius: 25px; 
-    z-index: -1; 
-}
 
 
 .meet-team {
@@ -650,3 +664,193 @@ a{
     gap: 16px;
 }
 
+.boxFormBlock{
+    display: flex;
+    justify-content: center;
+}
+
+.FormBlock{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 1150px;
+    height: 470px;
+    border-radius: 35px;
+    background-color: white;
+}
+
+.textHader{
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.FormHeader{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.uFormHeader{
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400; 
+    position: relative;
+    bottom: 35px;
+}
+
+.FormContacts{
+    display: flex;
+}
+
+.boxFormContacts{
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.FormFields{
+    position: absolute;
+    top: 230px;
+    right: 50px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Phone{
+    display: flex;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400; 
+}
+
+.Mail{
+    display: flex;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.Phoneimg{
+    position: relative;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.Phonemail{
+    position: relative;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+.FormSocialsHeader{
+    letter-spacing: -1px;
+    font-size: 23px;
+    font-weight: 600; 
+}
+
+.FormSocials{
+    position: relative;
+    left: -10px;
+    top: -5px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-field {
+    height: 60px;
+    padding-left: 40px;
+    border: 2px solid #c9d5c9;
+    border-radius: 20px;
+    background-color: #ffffff;
+    outline: none;
+    width: 400px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: outline 0.2s ease-in-out, border 0.2s ease-in-out, background-color 0.5s ease-in-out; /* увеличенное время,  ease-in-out */
+}
+
+.input-field:focus {
+    outline: 2px solid #b7b7b7;
+    border: 2px solid #b7b7b7; /* изменяем цвет рамки при фокусе */
+    background-color: #fcf9f9; /* изменяем цвет фона при фокусе*/
+}
+
+.input-field::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: #2D2D2D;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#input{
+    position: relative;
+    bottom: 10px;
+}
+.SendForm{
+    top: 130px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009379;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 50px;
+    border-radius: 22px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.SendForm:hover{
+    transform: scale(0.9);
+}
+
+footer {
+    background-color: #2D2D2D; /*  цвет фона */
+    position: fixed;  /*  делаем фиксированным */
+    bottom: 0;       /*  приклеиваем к низу */
+    left: 0;            /* приклеиваем к левому краю*/
+    width: 100%;      /*  растягиваем на всю ширину */
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.endbar-container {
+    width: 100%;              /*  растягиваем на всю ширину */
+    max-width: 1200px;      /*  ограничиваем максимальную ширину  */
+    margin: 0 auto;           /*  центрируем по горизонтали  */
+    padding: 0 20px;       /*  внутренний отступ  */
+    box-sizing: border-box; /*  включаем padding в размер */
+}
+
+.endbar-content {
+    display: flex;         /* делаем flex-контейнером */
+     justify-content: space-between;  /*  размещаем элементы по краям */
+      align-items: center;    /*  выравниваем элементы по центру вертикально */
+}
+
+.endbar-content p {
+    font-size: 0.9em;     /*  размер текста */
+    color: #ffffff;       /* цвет текста */
+}
+
+.social-links {
+  display: flex;  /*  делаем flex-контейнером*/
+  list-style: none;  /*  убираем маркеры списка */
+}
+
+.social-links li {
+    margin-left: 15px;  /*  отступ между элементами списка */
+}
